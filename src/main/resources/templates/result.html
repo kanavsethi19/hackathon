@@ -1,0 +1,35 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>Form Submission</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<link
+	href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+	rel="stylesheet"
+	integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+	crossorigin="anonymous" />
+
+<link th:href="@{css/style.css}" rel="stylesheet" />
+</head>
+<body class="gray-bg">
+	<br>
+	<br>
+	<br>
+
+	<div class="middle-box text-center loginscreen animated fadeInDown">
+		<hr>
+		<div>
+			<h3 class="text-primary">Details as below are submitted! We will
+				get back to you.</h3>
+			<p class=text-secondary th:text="'First Name: ' + ${user.userName}" />
+			<p class=text-secondary
+				th:text="'Phone Number: ' + ${user.phoneNumber}" />
+			<p class=text-secondary th:text="'E-Mail: ' + ${user.emailId}" />
+			<a href="/form">CLICK HERE TO SUBMIT ANOTHER QUERY!</a>
+			<hr>
+		</div>
+	</div>
+
+
+</body>
+</html>

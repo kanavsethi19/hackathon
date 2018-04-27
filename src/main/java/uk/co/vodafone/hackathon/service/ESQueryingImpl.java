@@ -73,8 +73,8 @@ public class ESQueryingImpl implements ESQuerying {
 			SearchSourceBuilder sourceBuilder = new SearchSourceBuilder();
 			sourceBuilder.query(builder);
 			sourceBuilder.from(0);
-			/*String[] includeFields = new String[] { "id", "deviceSpecificPricing.*" };
-			sourceBuilder.fetchSource(includeFields, null);*/
+			String[] includeFields = new String[] { "id", "deviceSpecificPricing.*" };
+			sourceBuilder.fetchSource(includeFields, null);
 			sourceBuilder.size(bundleIds.size());
 			SearchRequest request = new SearchRequest(indexName);
 			request.types(type);
